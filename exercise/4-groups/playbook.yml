@@ -1,6 +1,6 @@
 ---
 - name: Groups
-  hosts: ???????????????????????????
+  hosts: servers, MainHost, SubHost
   become: yes
   tasks:
     - name: Ensure Nginx is installed
@@ -17,3 +17,6 @@
     - name: Display Git Version
       debug:
         var: git_version_output.stdout
+# hosts: servers successful
+# hosts: single instance Ansible-Exercise1 successful
+# hosts: group SubHost successful
