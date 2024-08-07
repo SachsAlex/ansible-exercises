@@ -1,0 +1,15 @@
+---
+- name: Exercise 2
+  hosts: ex2_hosts
+  become: true
+  tasks:
+    - name: Ensure Git is installed
+      apt:
+        name: git
+        state: present
+    - name: Check Git version
+      shell: git -v
+      register: git_version_output
+    - name: Display Git Version
+      debug:
+        var: git_version_output.stdout
