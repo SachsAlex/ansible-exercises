@@ -1,0 +1,9 @@
+---
+- name: Vault
+  hosts: secret_service
+  vars_files:
+    - <geheime-datei>
+  tasks: 
+    - name: Show Password
+      debug:
+        var: <geheime-variable>
