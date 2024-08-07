@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "<bucket-name>" # Hier eigenen Bucket eintragen
+    bucket = "bucket-aws23-10" # Hier eigenen Bucket eintragen
     key    = "ansible-exercise/ec2.tfstate"
     region = "eu-central-1"
   }
