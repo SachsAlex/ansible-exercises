@@ -20,3 +20,4 @@
 # hosts: servers successful
 # hosts: single instance Ansible-Exercise1 successful
 # hosts: group SubHost successful
+# hosts: multiple hosts successful with ","
