@@ -1,0 +1,41 @@
+---
+- name: Play1
+  hosts: EC2Group1
+  become: yes
+  tasks:
+    - name: Get Group1
+      shell: echo "Hallo von EC2Group1"
+      register: hosts1
+    - name: Display Messages
+      debug:
+        msg: "{{hosts1.stdout}}"
+
+- name: Play2
+  hosts: EC2Group2
+  become: yes
+  tasks:
+    - name: Get Group2
+      shell: echo "Hallo von EC2Group2"
+      register: hosts2
+    - name: Display Messages
+      debug:
+        msg: "{{hosts2.stdout}}"
+
+- name: Play3
+  hosts: EC2Group3
+  become: yes
+  tasks:
+    - name: Get Group3
+      shell: echo "Hallo von EC2Group3"
+      register: hosts3
+    - name: Display Messages
+      debug:
+        msg: "{{hosts3.stdout}}"
+
+- name: Superplay
+  hosts: servers
+  become: yes
+  tasks:
+    - name: Get all IP-Adresses
+      debug:
+        msg: "{{ ansible_ssh_host }}"

@@ -8,6 +8,10 @@ Achtung: Diese Aufgaben setzt eine hosts.ini und ein Playbook wie in Exercise 5 
 
 3. Versuche mit die Instanzen anzupingen mit unserem üblichen Ansible Befehl. Kannst du auch nur einzelne Gruppen oder sogar einzelne Hosts anpingen? Wenn ja, was ändert sich am Befehl?
 
+- Originaler Befehl: ansible -i <hosts>.ini all -m ping
+- Einzelne Gruppe: ansible -i <hosts>.ini <Gruppenname> -m ping (Bsp.: EC2Group1)
+- Einzelner Host: ansible -i <hosts>.ini <Hostname> -m ping (Bsp.: Ansible-Exercise1)
+
 4. Sieh dir den Befehl "ansible-inventory" an. Wir haben gelernt, dass ".ini" eigentlich nicht die einzige Variante ist, ein Inventory anzulegen.
 
 - Konvertiere deine "hosts.ini" mithilfe des "ansible-inventory"-Commands um in eine hosts.json
